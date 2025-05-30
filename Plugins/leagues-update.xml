@@ -1,0 +1,6 @@
+<update>
+  <version>3.0</version>
+  <download_url>https://www.example.com/download/plugin-update.zip</download_url>
+  <changelog>3.0 ...</changelog>
+  <license_expiry>2025-07-20</license_expiry>
+</update>
