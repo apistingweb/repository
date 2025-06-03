@@ -1,38 +1,18 @@
 /*==============================
 ~> Last Updated          : 10 - 02 - 2025 : 07:00 PM GMT +04
 ===============================*/
-function showSection(ids, clickedButton) {
-  // ids يمكن أن تكون إما string أو مصفوفة
-  let idsToShow = Array.isArray(ids) ? ids : [ids];
-
-  // إزالة الصنف Open-Now من كل الحاويات
-  document.querySelectorAll(".STING-WEB-Container").forEach(container => {
-    container.classList.remove("Open-Now");
-  });
-
-  // تفعيل الحاويات حسب المعرّفات المرسلة
-  idsToShow.forEach(id => {
-    let el = document.getElementById(id);
-    if (el) el.classList.add("Open-Now");
-  });
-
-  // إزالة الصنف active من كل أزرار الدوريات
-  document.querySelectorAll(".STING-WEB-BTN").forEach(btn => {
-    btn.classList.remove("active");
-  });
-
-  // تفعيل الأزرار حسب الـ clickedButton: 
-  // إذا clickedButton هو عنصر واحد فقط (مثلاً عند النقر)، نجعله active
-  // أما إذا أرسلت أكثر من زر فيمكن تعديل هذا الجزء ليقبل مصفوفة أزرار
-  if (clickedButton) {
-    if (Array.isArray(clickedButton)) {
-      clickedButton.forEach(btn => btn.classList.add("active"));
-    } else {
-      clickedButton.classList.add("active");
-    }
+function showSection(_0x4c48fb, _0x3b6344) {
+  let target = document.getElementById(_0x4c48fb);
+  if (!target.classList.contains("Open-Now")) {
+    target.classList.add("Open-Now");
+    _0x3b6344.classList.add("active");
+  } else {
+    target.classList.remove("Open-Now");
+    _0x3b6344.classList.remove("active");
   }
-}
 
+  // إبقاء باقي الأقسام كما هي
+}
   document.getElementById(_0x4c48fb).classList.add("Open-Now");
   document.querySelectorAll(".STING-WEB-BTN").forEach(_0x8e3fa8 => {
     _0x8e3fa8.classList.remove("active");
